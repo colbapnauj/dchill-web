@@ -1,8 +1,24 @@
 :root {
     --color1: #FFFDE1;
-    --color2: #FBE580;
-    --color3: #93BD57;
-    --color4: #980404;
+    --color2: #F3BE22;
+    --color3: #F29627;
+    --color4: #F24C3C;
+    --morado: #511F74;
+    --verde: #26A699;
+    --negro: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+    /** TODO: Mejorar comportamiento con JS */
+}
+
+@font-face {
+  font-family: 'April Fools Day';
+  src: url('/assets/fonts/april_fools_day/April Fools\' Day Crazy vrs.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -19,18 +35,39 @@ body {
 
 .header {
     background-color: white;
-    padding: 20px;
 }
 
 .header-container {
     width: 100%;
-    max-width: 1200px;
+    height: 103px;
+    border-bottom: solid 2px var(--negro);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo-container {
+    background-color: var(--verde);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 21px;
+    transform: translate(-50%);
+    z-index: 2;
 }
 
 .logo {
-    height: 50px;
     width: 100px;
-    background-color: var(--color2);
+    height: fit-content;
 }
 
 .nav-list {
@@ -44,24 +81,30 @@ body {
     margin-right: 30px;
 }
 
+.nav-item:hover {
+    text-decoration: underline;
+    /* TODO: Agregar estilo a subrayado */
+}
+
 .nav-link {
     text-decoration: none;
-    color: var(--color2);
+    color: var(--morado);
     font-weight: bold;
 }
 
 .btn-order {
     padding: 10px 20px;
-    background-color: var(--color3);
+    background-color: var(--morado);
     color: white;
     border: none;
     font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
 }
 
 .main-section {
     width: 100%;
-    background-color: var(--color4);
-    padding: 100px 20px 50px 20px;
+    height: 100vh;
 }
 
 .main-image {
@@ -70,9 +113,38 @@ body {
     background-color: var(--color1);
 }
 
+.main-content {
+    background: url('/assets/fondo_2.jpg');
+    background-size: cover;
+    position: relative;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.main-overlay h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.main-background {
+    position: absolute;
+}
+
+.content {
+    position: fixed;
+    z-index: 3;
+}
+
 .main-title {
+    /** TODO Aplicar fuente de la marca */
+    font-family: 'April Fools Day';
     font-size: 40px;
     color: white;
+
     margin: 20px 0;
 }
 
@@ -81,6 +153,7 @@ body {
 }
 
 .btn-order-hero {
+    margin-top: 50px;
     padding: 15px 40px;
     font-size: 18px;
 }
