@@ -292,3 +292,47 @@ body {
     height: 300px;
     background-color: #ddd;
 }
+
+.location-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.location-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: var(--morado);
+}
+
+.location-subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .map-iframe {
+        height: 350px;
+    }
+}
