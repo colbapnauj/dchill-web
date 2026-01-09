@@ -229,36 +229,6 @@ body {
     text-align: justify;
 }
 
-@media (max-width: 768px) {
-    .content-section {
-        padding: 50px 20px;
-    }
-    
-    .section-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .section-column-left,
-    .section-column-right {
-        width: 100%;
-        min-width: 100%;
-    }
-    
-    .section-title {
-        font-size: 32px;
-        text-align: center;
-    }
-    
-    .section-text {
-        font-size: 16px;
-        text-align: left;
-    }
-    
-    .dish-image {
-        height: 300px;
-    }
-}
 
 .products-section {
     width: 100%;
@@ -411,8 +381,431 @@ body {
     display: block;
 }
 
+/* Media Queries para Mobile */
 @media (max-width: 768px) {
+    /* Header Mobile */
+    .header-container {
+        height: auto;
+        min-height: 90px;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+    }
+    
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+        padding: 5px 8px;
+        white-space: nowrap;
+    }
+    
+    .logo-container {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        left: auto;
+        transform: none;
+        order: 1;
+        margin: 0;
+        top: 0;
+    }
+    
+    .logo {
+        width: 60px;
+    }
+    
+    .header-actions {
+        order: 2;
+        margin-left: auto;
+    }
+    
+    .btn-order-header {
+        padding: 8px 12px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+    
+    /* Hero Section Mobile */
+    .main-content {
+        height: 70vh;
+        min-height: 500px;
+        padding: 20px;
+    }
+    
+    .main-overlay h1 {
+        font-size: 50px;
+    }
+    
+    .main-title {
+        font-size: 28px;
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .btn-order-hero {
+        margin-top: 30px;
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    /* Sección Nosotros Mobile */
+    .content-section {
+        padding: 40px 15px;
+    }
+    
+    .section-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .section-column-left,
+    .section-column-right {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.6;
+    }
+    
+    .dish-image {
+        height: 250px;
+    }
+    
+    /* Productos Mobile */
+    .products-section {
+        padding: 40px 15px;
+    }
+    
+    .products-header {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .products-title {
+        font-size: 28px;
+    }
+    
+    .products-subtitle {
+        font-size: 16px;
+    }
+    
+    .products-row {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .product-column {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0;
+    }
+    
+    .product-image {
+        height: 300px;
+    }
+    
+    .product-name {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .product-description {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .products-footer {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    /* Instagram Mobile */
+    .instagram-section {
+        padding: 40px 15px;
+    }
+    
+    .instagram-header {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .instagram-title {
+        font-size: 28px;
+    }
+    
+    .instagram-subtitle {
+        font-size: 16px;
+    }
+    
+    .instagram-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .instagram-item {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        margin: 0;
+    }
+    
+    /* Ubicación Mobile */
+    .location-section {
+        padding: 40px 15px;
+    }
+    
+    .location-header {
+        margin-bottom: 30px;
+    }
+    
+    .location-title {
+        font-size: 28px;
+    }
+    
+    .location-subtitle {
+        font-size: 16px;
+    }
+    
     .map-iframe {
-        height: 350px;
+        height: 300px;
+    }
+    
+    /* Container Mobile */
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Media Queries para Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .nav-item {
+        margin-right: 20px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .product-column {
+        width: 48%;
+        max-width: 48%;
+        margin: 0 1%;
+    }
+    
+    .products-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .instagram-item {
+        width: 48%;
+        max-width: 48%;
+        margin: 0 1%;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background-color: var(--morado);
+    color: white;
+    padding: 50px 20px 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.footer-subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color2);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-social-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: var(--color2);
+}
+
+.footer-hours {
+    margin-top: 10px;
+}
+
+.footer-hours .footer-text {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-legal-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-link:hover {
+    color: var(--color2);
+}
+
+.footer-separator {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+/* Footer Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 15px 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-title {
+        font-size: 24px;
+    }
+    
+    .footer-subtitle {
+        font-size: 16px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .footer-separator {
+        display: none;
     }
 }
