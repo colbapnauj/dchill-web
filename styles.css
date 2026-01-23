@@ -443,6 +443,21 @@ body {
     .header-actions {
         order: 2;
         margin-left: auto;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .welcome-message {
+        order: 1;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        padding: 6px 12px;
+        justify-content: center;
+    }
+    
+    .welcome-message .welcome-text {
+        font-size: 12px;
     }
     
     .btn-order-header {
@@ -917,6 +932,26 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
+}
+
+.welcome-message {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: rgba(81, 31, 116, 0.1);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.welcome-message .welcome-text {
+    font-size: 14px;
+    color: var(--morado);
+    font-weight: 500;
+}
+
+.welcome-message .welcome-text strong {
+    color: var(--morado);
+    font-weight: bold;
 }
 
 /* ===============================

@@ -131,6 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="header-actions">
+                <div id="welcomeMessage" class="welcome-message" style="display: none;">
+                    <span class="welcome-text">Bienvenido <strong id="usernameDisplay"></strong></span>
+                </div>
                 <button id="darkModeToggle" class="theme-toggle" aria-label="Modo oscuro">
                     <span class="icon sun">☀️</span>
                     <span class="icon moon">🌙</span>
@@ -409,6 +412,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+    });
+
+    // Mostrar mensaje de bienvenida si hay usuario logueado
+    window.addEventListener('DOMContentLoaded', () => {
+        const loggedInUser = sessionStorage.getItem('loggedInUser');
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        const usernameDisplay = document.getElementById('usernameDisplay');
+        const loginNavItem = document.querySelector('.nav-item a[href="login.html"]')?.closest('.nav-item');
+
+        if (loggedInUser) {
+            // Mostrar mensaje de bienvenida
+            if (welcomeMessage && usernameDisplay) {
+                usernameDisplay.textContent = loggedInUser;
+                welcomeMessage.style.display = 'block';
+            }
+            
+            // Ocultar botón de login y mostrar logout
+            if (loginNavItem) {
+                loginNavItem.innerHTML = '<a href="#" class="nav-link" id="logoutLink">LOGOUT</a>';
+                const logoutLink = document.getElementById('logoutLink');
+                if (logoutLink) {
+                    logoutLink.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        sessionStorage.removeItem('loggedInUser');
+                        window.location.reload();
+                    });
+                }
+            }
+        } else {
+            // Ocultar mensaje de bienvenida si no hay usuario
+            if (welcomeMessage) {
+                welcomeMessage.style.display = 'none';
+            }
+        }
     });
     </script>
 
