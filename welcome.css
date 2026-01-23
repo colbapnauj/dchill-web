@@ -1,0 +1,133 @@
+.welcome-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--morado) 0%, var(--verde) 100%);
+    padding: 20px;
+}
+
+.welcome-box {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.welcome-header {
+    margin-bottom: 30px;
+}
+
+.welcome-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-title {
+    font-size: 36px;
+    color: var(--morado);
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.welcome-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.welcome-content {
+    margin: 40px 0;
+}
+
+.welcome-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: var(--verde);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+
+.welcome-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.welcome-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-welcome {
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--morado);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3d1655;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--morado);
+    border: 2px solid var(--morado);
+}
+
+.btn-secondary:hover {
+    background-color: var(--morado);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 15px;
+    }
+
+    .welcome-box {
+        padding: 40px 25px;
+    }
+
+    .welcome-title {
+        font-size: 28px;
+    }
+
+    .welcome-logo {
+        width: 100px;
+    }
+
+    .welcome-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+    }
+}
