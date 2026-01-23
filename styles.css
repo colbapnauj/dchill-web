@@ -892,3 +892,172 @@ body {
 
 .prev { left: 15px; }
 .next { right: 15px; }
+/* ===============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===============================
+   HEADER - BOTONES
+================================ */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* ===============================
+   BOTÓN ORDENAR AHORA
+================================ */
+
+.btn-order {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-order:hover {
+    background-color: #53157a;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   BOTÓN MODO OSCURO
+================================ */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.theme-toggle .icon {
+    position: absolute;
+    font-size: 20px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.theme-toggle .moon {
+    opacity: 0;
+    transform: scale(0) rotate(90deg);
+}
+
+/* ===============================
+   MODO OSCURO (CORRECTO)
+================================ */
+
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* CONTENEDORES GRANDES */
+.dark-mode body {
+    background-color: #121212;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode main,
+.dark-mode section {
+    background-color: #121212;
+}
+
+/* NO tocar div internos */
+
+/* Textos */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode p,
+.dark-mode span,
+.dark-mode li {
+    color: #f1f1f1;
+}
+
+/* Links */
+.dark-mode a {
+    color: #ffffff;
+}
+
+/* ===============================
+   HERO Y LOGO (SIN FONDOS)
+================================ */
+
+.hero,
+.hero-content,
+.hero-title,
+.hero-text,
+.logo,
+.logo img {
+    background: transparent !important;
+}
+
+/* ===============================
+   BOTÓN OSCURO ACTIVO
+================================ */
+
+.dark-mode .theme-toggle {
+    background-color: #222222;
+}
+
+.dark-mode .theme-toggle .sun {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+}
+
+.dark-mode .theme-toggle .moon {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+}
+
+/* ===============================
+   IMÁGENES
+================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===============================
+   TRANSICIONES
+================================ */
+
+body,
+header,
+main,
+section,
+footer {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}

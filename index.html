@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+
 <body>
     <header class="header">
         <div class="header-container">
@@ -130,6 +131,10 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="header-actions">
+                <button id="darkModeToggle" class="theme-toggle" aria-label="Modo oscuro">
+                    <span class="icon sun">☀️</span>
+                    <span class="icon moon">🌙</span>
+                </button>
                 <a href="https://wa.me/message/MARVSA7SUDIFA1" 
                     target="_blank"
                     class="btn-order btn-order-header">
@@ -399,6 +404,14 @@ document.addEventListener("DOMContentLoaded", () => {
       "menu": "https://storage.googleapis.com/abl_storage/dchil_carta.pdf"
     }
     </script>
+    <script>
+    const toggle = document.getElementById("darkModeToggle");
+
+    toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    });
+    </script>
+
 </body>
 
 </html>
