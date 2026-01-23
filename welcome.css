@@ -107,6 +107,48 @@
     transform: translateY(-2px);
 }
 
+/* Dark Mode Styles */
+.dark-mode .welcome-container {
+    background: linear-gradient(135deg, #1a0d26 0%, #0d4a42 100%);
+}
+
+.dark-mode .welcome-box {
+    background: #1e1e1e;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .welcome-title {
+    color: #f1f1f1;
+}
+
+.dark-mode .welcome-subtitle {
+    color: #b0b0b0;
+}
+
+.dark-mode .welcome-text {
+    color: #b0b0b0;
+}
+
+.dark-mode .btn-primary {
+    background-color: var(--morado);
+    color: white;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #6a2a8a;
+}
+
+.dark-mode .btn-secondary {
+    background-color: transparent;
+    color: #f1f1f1;
+    border: 2px solid var(--morado);
+}
+
+.dark-mode .btn-secondary:hover {
+    background-color: var(--morado);
+    color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .welcome-container {

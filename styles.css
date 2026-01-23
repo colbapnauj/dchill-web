@@ -1076,6 +1076,18 @@ body {
 }
 
 /* ===============================
+   MENSAJE DE BIENVENIDA EN DARK MODE
+================================ */
+
+.dark-mode .welcome-message .welcome-text {
+    color: #ffffff;
+}
+
+.dark-mode .welcome-message .welcome-text strong {
+    color: #ffffff;
+}
+
+/* ===============================
    IMÁGENES
 ================================ */
 
