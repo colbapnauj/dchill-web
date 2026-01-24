@@ -905,8 +905,18 @@ body {
     border-radius: 50%;
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.prev {
+    left: 15px;
+    width: 55px;
+    height: 55px;
+}
+
+.next {
+    right: 15px;
+    width: 55px;
+    height: 55px;
+}
+
 /* ===============================
    RESET
 ================================ */
