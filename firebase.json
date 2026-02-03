@@ -1,5 +1,16 @@
 {
-  "hosting": [{
+  "hosting": [
+    {
+      "site": "dchill-web",
+      "public": "./",
+      "ignore": [
+        ".git/**",
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
     "site": "d-chill",
     "public": "./",
     "ignore": [
