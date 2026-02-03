@@ -1,0 +1,23 @@
+{
+  "hosting": [{
+    "site": "d-chill",
+    "public": "./",
+    "ignore": [
+      ".git/**",
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  {
+    "site": "nuevo-sitio-dchill",
+    "public": "./",
+    "ignore": [
+       ".git/**",
+       "firebase.json",
+       "**/.*",
+       "**/node_modules/**"
+     ]
+  }
+]
+}

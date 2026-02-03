@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "dchill-web"
+  },
+  "targets": {
+    "dchill-web": {
+      "hosting": {
+        "name": [
+          "d-chil",
+          "d-chill"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
